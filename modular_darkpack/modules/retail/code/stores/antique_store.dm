@@ -15,5 +15,16 @@
 		new /datum/data/vending_product("Серебряный дублон", /obj/item/coin/silver/doubloon, 50),
 		new /datum/data/vending_product("Монета с двумя головами", /obj/item/coin/twoheaded, 100),
 		new /datum/data/vending_product("Корона", /obj/item/clothing/head/costume/crown, 3000),
-		new /datum/data/vending_product("Изысканная корона", /obj/item/clothing/head/costume/crown/fancy, 9000)
+		new /datum/data/vending_product("Изысканная корона", /obj/item/clothing/head/costume/crown/fancy, 9000),
+		// Crimson Grid Edit Add - Shop fixes
+		new /datum/data/vending_product("Боевой топор", /obj/item/fireaxe/vamp/battle),
+		new /datum/data/vending_product("Латный доспех (Зелёный)", /obj/item/clothing/suit/armor/riot/knight, 2500),
+		new /datum/data/vending_product("Латный шлем (Зелёный)", /obj/item/clothing/head/helmet/knight, 500),
+		new /datum/data/vending_product("Латный доспех (Синий)", /obj/item/clothing/suit/armor/riot/knight/blue, 2500),
+		new /datum/data/vending_product("Латный шлем (Синий)", /obj/item/clothing/head/helmet/knight/blue, 500),
+		new /datum/data/vending_product("Латный доспех (Жёлтый)", /obj/item/clothing/suit/armor/riot/knight/yellow, 2500),
+		new /datum/data/vending_product("Латный шлем (Жёлтый)", /obj/item/clothing/head/helmet/knight/yellow, 500),
+		new /datum/data/vending_product("Латный доспех (Красный)", /obj/item/clothing/suit/armor/riot/knight/red, 2500),
+		new /datum/data/vending_product("Латный шлем (Красный)", /obj/item/clothing/head/helmet/knight/red, 500),
+		// Crimson Grid Edit - Shop Fixes
 	)
