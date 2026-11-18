@@ -30,7 +30,7 @@
 
 /obj/item/blood_hunt/attack_self(mob/user)
 	. = ..()
-	var/chosen_name = tgui_input_text(user, "Впишите имя того, на кого объявляется Охота или кому даруется прощение:", "Кровавая Охота")
+	var/chosen_name = tgui_input_text(user, "Впишите имя того, на кого объявляется Охота или кому даруется прощение:", "Кровавая Охота", encode = FALSE)
 	if(!chosen_name)
 		return
 	chosen_name = trim(chosen_name)
