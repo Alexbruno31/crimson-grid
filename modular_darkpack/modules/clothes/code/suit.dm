@@ -463,7 +463,7 @@
 		/obj/item/gun/energy,
 		/obj/item/lighter,
 		/obj/item/melee/baton,
-		/obj/item/restraints/handcuffs
+		/obj/item/restraints/handcuffs,
 		/obj/item/reagent_containers/spray/pepper,
 		/obj/item/storage/fancy/cigarettes,
 		/obj/item/taperecorder,
