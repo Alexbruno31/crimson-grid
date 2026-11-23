@@ -105,7 +105,11 @@
 					bit_living.visible_message(span_italics(span_bold("[capitalize(declent_ru(NOMINATIVE))] целует [bit_living.declent_ru(ACCUSATIVE)]!")), span_userlove(span_bold("[capitalize(declent_ru(NOMINATIVE))] целует вас!")))
 
 				if(!HAS_TRAIT(src, TRAIT_BLOODY_LOVER) && has_conscious_witness(bit_living)) // CORVAX EDIT +has_conscious_witness
-					SEND_SIGNAL(src, COMSIG_MASQUERADE_VIOLATION, "кусает человека и пьёт его кровь") // CORVAX EDIT CHANGE - Player Masquerade Witness - Original: SEND_SIGNAL(src, COMSIG_MASQUERADE_VIOLATION)
+					SEND_SIGNAL(src, COMSIG_MASQUERADE_VIOLATION, "кус CORVAX EDIT CHANGE - Player Masquerade Witness - Original: SEND_SIGNAL(src, COMSIG_MASQUERADE_VIOLATION)
 
 				log_combat(src, bit_living, "bit and is drinking blood from", "Drinker bloodpool : [bloodpool] ,  Victim bloodpool : [bit_living.bloodpool]")
+				if(!HAS_TRAIT(src, TRAIT_PAINFUL_VAMPIRE_KISS))
+					bit_living.apply_status_effect(/datum/status_effect/kissed)
+				SEND_SIGNAL(src, COMSIG_MASQUERADE_VIOLATION)
 				drinksomeblood(bit_living, TRUE)
+ает человека и пьёт его кровь") //
