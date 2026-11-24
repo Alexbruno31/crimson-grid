@@ -286,7 +286,7 @@
 	//determine what specific action we're taking
 	switch (body_part)
 		if(BODY_ZONE_CHEST)//Listening to the chest
-			render_list += span_info("Вы прикладываете [declent_ru(ACCUSATIVE)] к [body_part(DATIVE)] [carbon_patient.declent_ru(GENITIVE)]:\n")
+			render_list += span_info("Вы прикладываете [declent_ru(ACCUSATIVE)] к [body_part] [carbon_patient.declent_ru(GENITIVE)]:\n")
 
 			//assess breathing
 			var/lung_noises = TRUE

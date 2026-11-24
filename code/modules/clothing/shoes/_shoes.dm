@@ -373,3 +373,23 @@
 	var/mutable_appearance/standing_overlay = current_overlays[1]
 	standing_overlay.icon = icon_to_use
 	standing.icon = icon_to_use
+
+// CORVAX EDIT ADD START
+/obj/item/clothing/shoes/proc/fastened_adjective()
+	switch(fastening_type)
+		if (SHOES_LACED)
+			return "завязаны"
+		if (SHOES_VELCRO, SHOES_STRAPS)
+			return "застёгнуты"
+
+	return "на месте"
+
+/obj/item/clothing/shoes/proc/fastening_ru(declent = NOMINATIVE)
+	var/static/list/forms = list(
+		SHOES_LACED = list(NOMINATIVE = "шнурки", GENITIVE = "шнурков", DATIVE = "шнуркам", ACCUSATIVE = "шнурки", INSTRUMENTAL = "шнурками", PREPOSITIONAL = "шнурках"),
+		SHOES_VELCRO = list(NOMINATIVE = "липучки", GENITIVE = "липучек", DATIVE = "липучкам", ACCUSATIVE = "липучки", INSTRUMENTAL = "липучками", PREPOSITIONAL = "липучках"),
+		SHOES_STRAPS = list(NOMINATIVE = "ремешки", GENITIVE = "ремешков", DATIVE = "ремешкам", ACCUSATIVE = "ремешки", INSTRUMENTAL = "ремешками", PREPOSITIONAL = "ремешках"),
+	)
+	var/list/found = forms[fastening_type] || forms[SHOES_LACED]
+	return found[declent]
+// CORVAX EDIT ADD END

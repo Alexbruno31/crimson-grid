@@ -160,9 +160,9 @@
 	if(SSticker.HasRoundStarted())
 		return
 
-	. += "Potential manifest:"
+	. += "Возможные роли:"
 	if(!length(SSticker?.reported_jobs))
-		. += "- No one!"
+		. += "- Ниодной!"
 		return
 
 	for(var/datum/job/job as anything in SSticker.reported_jobs)
@@ -175,7 +175,7 @@
 		var/lower_end = clamp(score_vector.x, 0, job_slot_count - 1)
 		var/upper_end = clamp(score_vector.y, 0, job_slot_count)
 
-		var/display = "[job.title]: [lower_end] to [upper_end] " // DARKPACK EDIT CHANGE
+		var/display = "[job.title]: [lower_end] на [upper_end] " // DARKPACK EDIT CHANGE
 		for(var/i in 1 to job_slot_count)
 			display += i <= lower_end ? "◼" : i <= upper_end ? "◩" : is_infinite_overflow ? "" : "◻"
 		if(is_infinite_overflow)

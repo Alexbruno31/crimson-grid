@@ -498,13 +498,13 @@
 		if(user == patient)
 			user.visible_message(
 				span_notice("[capitalize(user.declent_ru(NOMINATIVE))] умело перевязывает себе [limb.ru_plaintext_zone[ACCUSATIVE] || limb.plaintext_zone]..."),
-				span_notice("Вы быстро перевязываете себе [limb.ru_plaintext_zone[ACCUSATIVE]..."),
+				span_notice("Вы быстро перевязываете себе [limb.ru_plaintext_zone[ACCUSATIVE]]..."),
 				visible_message_flags = ALWAYS_SHOW_SELF_MESSAGE,
 			)
 		else
 			user.visible_message(
 				span_notice("[capitalize(user.declent_ru(NOMINATIVE))] перевязывает себе [limb.ru_plaintext_zone[ACCUSATIVE] || limb.plaintext_zone]..."),
-				span_notice("Вы перевязываете себе [limb.ru_plaintext_zone[ACCUSATIVE]..."),
+				span_notice("Вы перевязываете себе [limb.ru_plaintext_zone[ACCUSATIVE]]..."),
 				visible_message_flags = ALWAYS_SHOW_SELF_MESSAGE,
 			)
 
