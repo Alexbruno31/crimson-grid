@@ -55,7 +55,7 @@
 /// How many keybinds you get for activating Discipline powers, should be the maximum level players can normally have in Disciplines
 #define DISCIPLINE_ACTIVATION_KEYBINDS_AMOUNT 5
 /// Category for the keybinds where you select a Discipline and then activate its powers
-#define CATEGORY_DISCIPLINES "DISCIPLINES"
+#define CATEGORY_DISCIPLINES "Дисциплины"
 /// Category for the keybinds where you activate individual powers
 #define CATEGORY_DISCIPLINE_POWERS "DISCIPLINE POWERS"
 
