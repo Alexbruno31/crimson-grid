@@ -41,11 +41,18 @@ GLOBAL_LIST_EMPTY(street_blood)
 /datum/weather/particle/rain_storm
 	/// A per-turf chance scaled with the city size into dozens of strikes and fires every second
 	var/thunder_strikes_per_second = 1 / 40
+	/// Soaking every mob outside each second washed all their gear and rebuilt their overlays, about a tenth of the server
+	var/mob_act_chance = 20
 
 /datum/weather/particle/rain_storm/setup_weather_turfs()
 	. = ..()
 	if(weather_flags & WEATHER_THUNDER)
 		thunder_turfs_per_tick = thunder_strikes_per_second * SSweather.wait / (1 SECONDS)
+
+/datum/weather/particle/rain_storm/can_weather_act_mob(mob/living/mob_to_check)
+	if(!prob(mob_act_chance))
+		return FALSE
+	return ..()
 
 /datum/weather/particle/rain_storm/endless
 	thunder_strikes_per_second = 1 / 30
