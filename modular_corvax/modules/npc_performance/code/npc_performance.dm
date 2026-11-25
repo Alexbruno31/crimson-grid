@@ -1,17 +1,3 @@
-GLOBAL_LIST_EMPTY(turf_fires)
-
-/obj/effect/abstract/turf_fire/Initialize(mapload, power, fire_color)
-	. = ..()
-	if(. != INITIALIZE_HINT_QDEL)
-		GLOB.turf_fires += src
-
-/obj/effect/abstract/turf_fire/Destroy()
-	GLOB.turf_fires -= src
-	return ..()
-
-/mob/living/carbon/human/npc
-	COOLDOWN_DECLARE(fire_scan_cooldown)
-
 /mob/living/carbon/human/npc/proc/npc_walk_to(atom/target)
 	var/datum/move_loop/has_target/dist_bound/move_to/npc/current_loop = GLOB.move_manager.processing_on(src, SSmovement)
 	if(istype(current_loop) && current_loop.target == target && current_loop.delay == max(cached_multiplicative_slowdown, world.tick_lag))
@@ -38,10 +24,27 @@ GLOBAL_LIST_EMPTY(turf_fires)
 
 #define NPC_WAKE_RANGE 12
 #define NPC_WAKE_LEVELS_ABOVE 2
+#define DORMANT_NPC_LIFE_STRIDE 5
 
 /mob/living/carbon/human/npc
 	var/dormant = FALSE
+	var/skipped_life_ticks = 0
 	COOLDOWN_DECLARE(dormancy_check_cooldown)
+
+/// Organs, blood, breathing and temperature are most of an NPC's cost, away from players they run in rarer steps that cover the skipped time
+/mob/living/carbon/human/npc/Life(seconds_per_tick = SSMOBS_DT)
+	if(skipped_life_ticks < DORMANT_NPC_LIFE_STRIDE - 1 && life_can_wait())
+		skipped_life_ticks++
+		return
+	// the stuck counter that teleports dormant NPCs counts Life calls, so the skipped ones still count
+	if(loc == tupik_loc)
+		tupik_steps += skipped_life_ticks
+	var/elapsed = seconds_per_tick * (skipped_life_ticks + 1)
+	skipped_life_ticks = 0
+	return ..(elapsed)
+
+/mob/living/carbon/human/npc/proc/life_can_wait()
+	return !client && !danger_source && !on_fire && npc_is_dormant()
 
 /// Nobody can see a wandering NPC this far from every player, so it skips the steps and lets the stuck teleport carry it instead
 /mob/living/carbon/human/npc/proc/npc_is_dormant()
@@ -66,3 +69,4 @@ GLOBAL_LIST_EMPTY(turf_fires)
 
 #undef NPC_WAKE_RANGE
 #undef NPC_WAKE_LEVELS_ABOVE
+#undef DORMANT_NPC_LIFE_STRIDE
