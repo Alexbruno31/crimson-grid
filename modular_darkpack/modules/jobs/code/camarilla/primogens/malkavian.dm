@@ -45,7 +45,7 @@
 	jobtype = /datum/job/vampire/primogen_malkavian
 
 	ears = /obj/item/radio/headset/darkpack
-	id = /obj/item/card/primogen
+	id = /obj/item/card/clinic/malkav
 	glasses = /obj/item/clothing/glasses/vampire/sun
 	uniform = /obj/item/clothing/under/vampire/primogen_malkavian
 	suit = /obj/item/clothing/suit/vampire/trench/malkav
@@ -55,7 +55,13 @@
 	backpack_contents = list(
 		/obj/item/vamp/keys/malkav/primogen = 1,
 		/obj/item/card/credit/elder = 1,
+		/obj/item/card/primogen,
 		/obj/item/card/whip,
 		/obj/item/card/steward,
 		/obj/item/card/myrmidon,
 	)
+
+// CORVAX EDIT ADD
+/obj/item/card/clinic/malkav
+	name = "general psychiatry's badge"
+	desc = "Значок, подтверждающий авторитет клиники в вопросах психических откланений."

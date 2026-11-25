@@ -143,21 +143,18 @@
 	// DARKPACK EDIT END - MERITS_FLAWS
 	preferences.validate_quirks()
 	var/list/new_quirks = preferences.all_quirks | quirk_name
-	if (SSquirks.filter_invalid_quirks(new_quirks) != new_quirks) // CORVAX EDIT
-		tainted = TRUE
-		preferences.update_static_data(user, always_instant = TRUE)
-		return TRUE
-
-	var/datum/st_stat/freebie/freebie_points = preferences.preference_storyteller_stats[STAT_FREEBIE_POINTS] // CORVAX EDIT ADD
-	if (!freebie_points.decrease_points(quirk_type.value)) // CORVAX EDIT
+	if (SSquirks.filter_invalid_quirks(new_quirks) != new_quirks)
+		// If the client is sending an invalid give_quirk, that means that
+		// something went wrong with the client prediction, so we should
+		// catch it back up to speed.
 		tainted = TRUE
 		preferences.update_static_data(user, always_instant = TRUE)
 		return TRUE
 
 	preferences.all_quirks = new_quirks
-	preferences.validate_quirks()
 	tainted = TRUE
 	preferences.character_preview_view?.update_body()
+
 	return TRUE
 
 /datum/preference_middleware/quirks/proc/remove_quirk(list/params, mob/user)

@@ -333,6 +333,7 @@ GLOBAL_LIST_INIT(rare_discipline_types, list(
 	if(!vampire_splat)
 		return
 
+	var/has_any = FALSE // does this hoe even HAVE ANY
 	for(var/disc_path in discipline_levels)
 		if(discipline_levels[disc_path])
 			has_any = TRUE

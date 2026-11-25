@@ -286,7 +286,7 @@
 	for(var/obj/effect/abstract/turf_fire/fire as anything in SSturf_fire.processing)
 		if(fire.z != z || get_dist(src, fire) > DEFAULT_SIGHT_DISTANCE)
 			continue
-		update_fire_fear() // CORVAX EDIT CHANGE - ORIGINAL: afraid_of_fire = locate(/obj/effect/abstract/turf_fire) in view(DEFAULT_SIGHT_DISTANCE, src)
+		afraid_of_fire = locate(/obj/effect/abstract/turf_fire) in view(DEFAULT_SIGHT_DISTANCE, src)
 		break
 
 	// Combat behaviour

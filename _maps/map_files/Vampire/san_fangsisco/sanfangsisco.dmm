@@ -133,7 +133,7 @@
 /area/vtm/interior/setite/basement)
 "abo" = (
 /turf/open/floor/plating/rough,
-/area/vtm)
+/area/vtm/interior/penumbra/enoch)
 "abw" = (
 /obj/effect/turf_decal/bordur/corner{
 	dir = 8
@@ -6111,9 +6111,6 @@
 	},
 /turf/open/water/river,
 /area/vtm/interior/wyld/caern/internal)
-"bmw" = (
-/turf/open/water/vamp_sewer/border,
-/area/vtm)
 "bmx" = (
 /obj/structure/flora/bush/fullgrass/style_random,
 /turf/open/misc/grass,
@@ -11643,7 +11640,7 @@
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/church/staff)
 "cra" = (
-/obj/darkpack_car/scooter,
+/obj/darkpack_car/scooter/rand,
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/outside/chinatown)
 "crj" = (
@@ -18324,16 +18321,6 @@
 	pixel_y = 8;
 	alpha = 155
 	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/platform/lowwall/city/window,
-/obj/structure/vampfence/rich{
-	dir = 4;
-	name = "bars"
-	},
 /turf/open/floor/city/plating,
 /area/vtm/interior/clinic/haven)
 "dKN" = (
@@ -20604,7 +20591,7 @@
 	icon_state = "trash5"
 	},
 /turf/open/floor/plating/rough,
-/area/vtm)
+/area/vtm/interior/penumbra/enoch)
 "eie" = (
 /obj/effect/turf_decal/darkpack/rough{
 	dir = 5
@@ -22864,7 +22851,7 @@
 /area/vtm/interior/endron_facility/restricted)
 "eHh" = (
 /obj/effect/decal/cleanable/cardboard,
-/obj/darkpack_car/scooter,
+/obj/darkpack_car/scooter/rand,
 /turf/open/floor/plating/asphalt,
 /area/vtm/outside/fishermanswharf)
 "eHj" = (
@@ -23720,7 +23707,7 @@
 	icon_state = "trash7"
 	},
 /turf/open/floor/plating/rough,
-/area/vtm)
+/area/vtm/interior/penumbra/enoch)
 "ePY" = (
 /obj/structure/table/wood,
 /obj/item/paper_bin{
@@ -31804,14 +31791,11 @@
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/interior/giovanni)
 "gCp" = (
-/obj/structure/vampdoor/simple{
-	lockpick_difficulty = 16;
-	lock_id = "bar"
-	},
 /obj/effect/mapping_helpers/door/lock,
-/obj/effect/mapping_helpers/door/bash_difficulty/eight,
 /obj/effect/mapping_helpers/door/lock_difficulty/ten,
 /obj/effect/mapping_helpers/door/access/baron,
+/obj/effect/mapping_helpers/door/bash_difficulty/ten,
+/obj/structure/vampdoor/reinf,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/anarch/basement)
 "gCs" = (
@@ -38297,7 +38281,7 @@
 /turf/open/floor/carpet/blue,
 /area/vtm/interior/museum)
 "hWE" = (
-/obj/darkpack_car/scooter,
+/obj/darkpack_car/scooter/rand,
 /turf/open/floor/plating/asphalt,
 /area/vtm/outside/ghetto)
 "hWJ" = (
@@ -43039,7 +43023,7 @@
 /turf/open/floor/carpet/darkpack/old,
 /area/vtm/interior/techshop)
 "jaa" = (
-/obj/darkpack_car/scooter,
+/obj/darkpack_car/scooter/rand,
 /turf/open/floor/plating/asphalt,
 /area/vtm/outside/fishermanswharf)
 "jad" = (
@@ -45792,7 +45776,7 @@
 /area/vtm/interior/jazzclub)
 "jEx" = (
 /turf/closed/wall/vampwall/market,
-/area/vtm)
+/area/vtm/interior/penumbra/enoch)
 "jEA" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 5
@@ -49991,16 +49975,6 @@
 	pixel_y = 8;
 	alpha = 155
 	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/platform/lowwall/city/window/reinforced,
-/obj/structure/vampfence/rich{
-	dir = 4;
-	name = "bars"
-	},
 /turf/open/floor/city/plating,
 /area/vtm/interior/clinic/haven)
 "kAF" = (
@@ -50553,9 +50527,14 @@
 /turf/open/floor/city/plating_mono,
 /area/vtm/interior/clinic)
 "kGA" = (
-/obj/fusebox,
-/turf/open/floor/city/toilet,
-/area/vtm/interior/anarch)
+/obj/effect/turf_decal/siding/wood/light{
+	dir = 4
+	},
+/obj/structure/chair/wood/darkpack/red{
+	dir = 4
+	},
+/turf/open/floor/wood/smooth,
+/area/vtm/interior/millennium_tower/f5)
 "kGC" = (
 /obj/structure/bed/maint,
 /turf/open/floor/plating/rough/cave,
@@ -60891,7 +60870,7 @@
 	icon_state = "trash8"
 	},
 /turf/open/floor/plating/rough,
-/area/vtm)
+/area/vtm/interior/penumbra/enoch)
 "mQO" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 5
@@ -64544,7 +64523,7 @@
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/outside/ghetto)
 "nFp" = (
-/obj/darkpack_car/scooter,
+/obj/darkpack_car/scooter/rand,
 /turf/open/floor/plating/asphalt,
 /area/vtm/outside/fishermanswharf/lower)
 "nFv" = (
@@ -65750,7 +65729,7 @@
 	icon_state = "trash19"
 	},
 /turf/open/floor/plating/rough,
-/area/vtm)
+/area/vtm/interior/penumbra/enoch)
 "nRB" = (
 /obj/effect/turf_decal/weather/dirt,
 /turf/open/floor/plating/rough/cave,
@@ -71472,7 +71451,7 @@
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/outside/chinatown)
 "peB" = (
-/obj/darkpack_car/scooter,
+/obj/darkpack_car/scooter/rand,
 /turf/open/floor/plating/asphalt,
 /area/vtm/outside/pacificheights/community)
 "peC" = (
@@ -76827,9 +76806,9 @@
 	lock_id = "bar"
 	},
 /obj/effect/mapping_helpers/door/lock,
-/obj/effect/mapping_helpers/door/bash_difficulty/eight,
 /obj/effect/mapping_helpers/door/lock_difficulty/ten,
 /obj/effect/mapping_helpers/door/access/baron,
+/obj/effect/mapping_helpers/door/bash_difficulty/ten,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/anarch/basement)
 "qlz" = (
@@ -78676,7 +78655,7 @@
 "qER" = (
 /obj/effect/decal/cleanable/trash,
 /turf/open/floor/plating/rough,
-/area/vtm)
+/area/vtm/interior/penumbra/enoch)
 "qES" = (
 /turf/closed/wall/vampwall/rust,
 /area/vtm/interior/millennium_tower/f4)
@@ -80581,7 +80560,7 @@
 /obj/effect/mapping_helpers/door/lock,
 /obj/effect/mapping_helpers/door/access/npc,
 /turf/open/floor/plating/rough,
-/area/vtm)
+/area/vtm/interior/penumbra/enoch)
 "ral" = (
 /obj/effect/turf_decal/siding/grey{
 	dir = 8
@@ -82625,16 +82604,6 @@
 	pixel_y = 8;
 	alpha = 155
 	},
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/platform/lowwall/city/window,
-/obj/structure/vampfence/rich{
-	dir = 4;
-	name = "bars"
-	},
 /turf/open/floor/city/plating,
 /area/vtm/interior/clinic/haven)
 "rvY" = (
@@ -84088,7 +84057,7 @@
 	},
 /area/vtm/interior/laundromat)
 "rKP" = (
-/obj/darkpack_car/scooter,
+/obj/darkpack_car/scooter/rand,
 /turf/open/floor/plating/asphalt,
 /area/vtm/outside/chinatown)
 "rKU" = (
@@ -89208,7 +89177,7 @@
 "sQe" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating/rough,
-/area/vtm)
+/area/vtm/interior/penumbra/enoch)
 "sQi" = (
 /obj/effect/turf_decal/bordur{
 	dir = 9
@@ -90828,9 +90797,9 @@
 	lockpick_difficulty = 16
 	},
 /obj/effect/mapping_helpers/door/lock,
-/obj/effect/mapping_helpers/door/bash_difficulty/eight,
 /obj/effect/mapping_helpers/door/lock_difficulty/ten,
 /obj/effect/mapping_helpers/door/access/baron,
+/obj/effect/mapping_helpers/door/bash_difficulty/ten,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/anarch/basement)
 "tiC" = (
@@ -90908,7 +90877,7 @@
 /turf/open/misc/grass,
 /area/vtm/outside/giovanni/courtyard)
 "tjn" = (
-/obj/darkpack_car/scooter,
+/obj/darkpack_car/scooter/rand,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/outside/financialdistrict)
 "tjs" = (
@@ -96068,7 +96037,7 @@
 "uqh" = (
 /obj/structure/table/wood,
 /turf/open/floor/plating/rough,
-/area/vtm)
+/area/vtm/interior/penumbra/enoch)
 "uqo" = (
 /obj/structure/railing{
 	pixel_y = -2
@@ -102714,7 +102683,7 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior)
 "vKo" = (
-/obj/darkpack_car/scooter,
+/obj/darkpack_car/scooter/rand,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/outside/pacificheights)
 "vKt" = (
@@ -110637,7 +110606,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/outside/pacificheights/forest)
 "xrf" = (
-/obj/darkpack_car/scooter,
+/obj/darkpack_car/scooter/rand,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/outside/fishermanswharf/lower)
 "xrh" = (
@@ -113451,7 +113420,7 @@
 /turf/open/misc/dirt,
 /area/vtm/outside/pacificheights/forest)
 "xUy" = (
-/obj/darkpack_car/scooter,
+/obj/darkpack_car/scooter/rand,
 /turf/open/floor/plating/asphalt,
 /area/vtm/outside/unionsquare)
 "xUC" = (
@@ -152469,7 +152438,7 @@ snI
 snI
 snI
 snI
-qGw
+wTq
 owT
 wTq
 snI
@@ -152726,9 +152695,9 @@ dvN
 dvN
 dvN
 dvN
-qGw
-bmw
-qGw
+wTq
+owT
+wTq
 dvN
 dvN
 dvN
@@ -152983,9 +152952,9 @@ dvN
 dvN
 dvN
 dvN
-qGw
-bmw
-qGw
+wTq
+owT
+wTq
 dvN
 dvN
 dvN
@@ -265012,7 +264981,7 @@ pyH
 pyH
 pyH
 hBS
-kGA
+aOU
 aOU
 aOU
 oyA
@@ -407190,9 +407159,9 @@ ljX
 hpD
 yfH
 mLg
-cta
-cta
-cta
+nUx
+kGA
+kGA
 cta
 cta
 cta
@@ -407450,7 +407419,7 @@ pNv
 nUx
 wGv
 wGv
-wGv
+nEP
 wGv
 wGv
 nEP

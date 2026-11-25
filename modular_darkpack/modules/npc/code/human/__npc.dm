@@ -153,7 +153,6 @@
 /mob/living/carbon/human/npc/Destroy()
 	UnregisterSignal(src, list(COMSIG_ATOM_WAS_ATTACKED, COMSIG_LIVING_MOB_BUMPED, COMSIG_CARBON_HELP_ACT))
 	danger_source = null
-	afraid_of_fire = null // CORVAX EDIT CHANGE - deleted the real fire on the map. ORIGINAL: QDEL_NULL(afraid_of_fire)
 	last_attacker = null
 	last_damager = null
 	walktarget = null
