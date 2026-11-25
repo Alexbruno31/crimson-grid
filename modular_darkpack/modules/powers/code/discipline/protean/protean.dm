@@ -6,6 +6,7 @@
 ●●● Слияние с землёй: пассивно
 ●●●● Облик Зверя: пассивно
 ●●●●● Превращение в туман: пассивно"}
+	id = DISCIPLINE_PROTEAN
 	icon_state = "protean"
 	clan_restricted = TRUE
 	power_type = /datum/discipline_power/protean

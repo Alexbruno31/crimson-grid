@@ -39,11 +39,11 @@
 	// CRIMSON EDIT ADDITION END - drug dealing
 	COOLDOWN_DECLARE(annoyed_cooldown)
 	COOLDOWN_DECLARE(car_dodge)
+	COOLDOWN_DECLARE(choose_path_cooldown)
 	var/hostile = FALSE
 	var/aggressive = FALSE
 	var/last_antagonised = 0
 	var/mob/living/danger_source
-	var/obj/effect/abstract/turf_fire/afraid_of_fire
 	var/mob/living/fleeing_from // CRIMSON EDIT ADDITION - drug dealing
 	var/mob/living/last_attacker
 	var/last_health = 100
@@ -167,7 +167,6 @@
 	GLOB.npc_list -= src
 	GLOB.alive_npc_list -= src
 	SShumannpcpool.currentrun -= src
-	SShumannpcpool.try_repopulate()
 	return ..()
 
 //====================Sticky Item Handling====================
