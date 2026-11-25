@@ -435,7 +435,7 @@ GLOBAL_LIST_INIT(paper_blanks, init_paper_blanks())
 	if(error_message)
 		to_chat(user, error_message)
 
-	// --- ПРОВЕРКА ОПЛАТЫ ДО ПЕЧАТИ ---
+	// if you managed to cancel the copy operation, tough luck. you aren't getting your money back.
 	var/total_cost = (copies_amount - 1) * usage_cost
 	if(!(obj_flags & EMAGGED) && total_cost > 0 && !issilicon(user))
 		if(attempt_charge(src, user, total_cost) & COMPONENT_OBJ_CANCEL_CHARGE)
@@ -443,7 +443,7 @@ GLOBAL_LIST_INIT(paper_blanks, init_paper_blanks())
 			copies_left = 0
 			reset_busy()
 			return
-	// ----------------------------------
+	
 
 	var/list/copies_made = list()
 	for(var/i in 1 to copies_amount)
@@ -611,7 +611,7 @@ GLOBAL_LIST_INIT(paper_blanks, init_paper_blanks())
 	var/obj/item/paper/printblank = get_empty_paper(created_paper)
 
 	var/printname = blank["name"]
-	var/list/printinfo = " "
+	var/printinfo
 	for(var/infoline in blank["info"])
 		printinfo += infoline
 
@@ -619,7 +619,7 @@ GLOBAL_LIST_INIT(paper_blanks, init_paper_blanks())
 	printblank.add_raw_text(printinfo, color = copy_colour)
 	printblank.update_appearance()
 	
-	delete_paper(PAPER_PAPER_USE) // <--- ДОБАВЛЕНА СТРОКА: тратим бумагу
+	delete_paper(PAPER_PAPER_USE) 
 	use_toner(PAPER_TONER_USE)
 	
 	return printblank
