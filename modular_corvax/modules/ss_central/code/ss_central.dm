@@ -15,20 +15,19 @@
 	default = FALSE
 	protection = CONFIG_ENTRY_LOCKED
 
-/atom/movable/screen/lobby/button/ready/Click(location, control, params)
-	var/mob/dead/new_player/new_player = hud?.mymob
-	if(usr == new_player && new_player.ready == PLAYER_NOT_READY && !usr.client?.discord_link_allows())
+/mob/dead/new_player/ready()
+	if(ready != PLAYER_READY_TO_PLAY && !client?.discord_link_allows())
 		return
 	return ..()
 
-/atom/movable/screen/lobby/button/join/Click(location, control, params)
-	if(usr == hud?.mymob && !usr.client?.discord_link_allows())
-		return
+/mob/dead/new_player/AttemptLateSpawn(rank)
+	if(!client?.discord_link_allows())
+		return FALSE
 	return ..()
 
-/atom/movable/screen/lobby/button/observe/Click(location, control, params)
-	if(usr == hud?.mymob && !usr.client?.discord_link_allows())
-		return
+/mob/dead/new_player/make_me_an_observer()
+	if(client && !client.discord_link_allows())
+		return FALSE
 	return ..()
 
 /mob/dead/new_player/Login()
