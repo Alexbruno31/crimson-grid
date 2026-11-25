@@ -6,6 +6,7 @@
 ●●● Обжигающее касание: пассивно
 ●●●● Броня гнева Каинова: Выносливость + Фехтование (сложность 7)
 ●●●●● Месть Самиэля: пассивно"}
+	id = DISCIPLINE_VALEREN
 	icon_state = "valeren"
 	clan_restricted = TRUE
 	power_type = /datum/discipline_power/valeren

@@ -28,7 +28,7 @@
 		JOB_PRIMOGEN_MALKAVIAN,
 	)
 
-	description = "Ensure Saint John's Clinic keeps itself afloat legally and monetarily. Handle malpractice cases, influence the Director to favor you."
+	description = "Следите за тем, чтобы клиника оставалась на плаву в юридическом и финансовом плане. Занимайтесь делами о халатности, влияйте на директора, чтобы он благоволил вам."
 	allowed_splats = null
 
 	job_tone = "objection"
@@ -52,4 +52,4 @@
 
 /obj/item/card/clinic/lawyer
 	name = "general councel's badge"
-	desc = "A badge which shows authority over the clinic in matters of the law."
+	desc = "Значок, подтверждающий авторитет клиники в вопросах закона."
