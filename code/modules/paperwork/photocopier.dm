@@ -398,10 +398,11 @@ GLOBAL_LIST_INIT(paper_blanks, init_paper_blanks())
 		return FALSE
 	obj_flags |= EMAGGED
 
-	playsound(src, SFX_SPARKS, 50, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
+	playsound(src, /datum/sound_effect/sparks, 50, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 	visible_message(span_warning("Из [declent_ru(GENITIVE)] сыплются искры!"))
 	balloon_alert(user, "система оплаты закорочена")
 	return TRUE
+
 
 /**
  * Will invoke the passed in `copy_cb` callback in 4 second intervals, and charge the user 5 credits for each copy made.
@@ -443,7 +444,7 @@ GLOBAL_LIST_INIT(paper_blanks, init_paper_blanks())
 			copies_left = 0
 			reset_busy()
 			return
-	
+
 
 	var/list/copies_made = list()
 	for(var/i in 1 to copies_amount)
@@ -618,10 +619,10 @@ GLOBAL_LIST_INIT(paper_blanks, init_paper_blanks())
 	printblank.name = "paper - '[printname]'"
 	printblank.add_raw_text(printinfo, color = copy_colour)
 	printblank.update_appearance()
-	
-	delete_paper(PAPER_PAPER_USE) 
+
+	delete_paper(PAPER_PAPER_USE)
 	use_toner(PAPER_TONER_USE)
-	
+
 	return printblank
 /**
  * Handles the copying of an ass photo.
