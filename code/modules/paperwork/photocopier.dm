@@ -611,7 +611,7 @@ GLOBAL_LIST_INIT(paper_blanks, init_paper_blanks())
 	var/obj/item/paper/printblank = get_empty_paper(created_paper)
 
 	var/printname = blank["name"]
-	var/printinfo
+	var/list/printinfo
 	for(var/infoline in blank["info"])
 		printinfo += infoline
 
